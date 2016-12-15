@@ -1,8 +1,8 @@
 slideshow = {}
 local slides = {}
 
-local function showpic(imagename)
-	local fsn = "formspeccer:image"
+local function showpic(imagename,playername)
+	local fsn = "slideshow:slides"
 	formspeccer:clear(fsn)
 	formspeccer:newform(fsn,"4,3",{
 		background = {
@@ -14,7 +14,7 @@ local function showpic(imagename)
 	formspeccer:show(minetest.get_player_by_name(playername),fsn)
 end
 
-local function run_slideshow(deck)
+local function run_slideshow(deck,playername)
 	if not deck then return end
 
 	for i=1,#deck do
@@ -43,6 +43,6 @@ function slideshow.clear_deck(deckname)
 	slides[deckname] = nil
 end
 
-function slideshow.show_deck(deckname)
-	run_slideshow(slides[deckname])
+function slideshow.show_deck(deckname,playername)
+	run_slideshow(slides[deckname],playername)
 end
