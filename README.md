@@ -8,6 +8,8 @@ Avoid making too many slides - media always has to go over the wire to the user 
 
 The current version enforces use of a JPEG file and displays using a 4:3 ratio.
 
+Requires [formspeccer](https://github.com/taikedz-mt/formspeccer)
+
 # Usage
 
 Example for registering tutorials
